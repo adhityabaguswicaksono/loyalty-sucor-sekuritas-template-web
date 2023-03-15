@@ -10,13 +10,15 @@
 
     <style>
       .grid-all{
-        grid-template-columns: repeat(3, auto);
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr fr;
         grid-template-areas: 'profile detail detail';
       }
-      .profile{
+      .grid-profile{
         grid-area: 'profile';
       }
-      .detail{
+      .grid-detail{
         grid-area: 'detail';
       }
     </style>
@@ -56,8 +58,8 @@
       </div>
     </nav>
 
-    <div class="p-8 pt-32 flex flex-col md:grid md:grid-all gap-3">
-        <div class="flex flex-wrap flex-col gap-4 p-8 md:p-12 justify-center bg-sucorblue rounded-md text-white outline outline-0 md:grid-profile">
+    <div class="p-8 pt-32 md:grid grid-all gap-3">
+        <div class="flex flex-wrap flex-col grow gap-4 p-8 md:p-12 justify-center bg-sucorblue rounded-md text-white outline outline-0 grid-profile">
           <div class="flex flex-col grow gap-3">
             <img src="https://raw.githubusercontent.com/adhityabaguswicaksono/loyalty-project/main/assets/thumbnailCard.png" class="rounded-full w-36 md:w-52 self-center"/>
             <h4 class="text-xl font-bold text-center self-center">Clean Canteen</h4>
@@ -94,7 +96,7 @@
           </div>
         </div>
         <div class="">
-          <div class="flex flex-wrap flex-col gap-4 p-8 md:p-12 justify-center bg-white rounded-md text-sucorblue outline outline-1 outline-sucorblue md:grid-detail">
+          <div class="flex flex-wrap flex-col grow gap-4 p-8 md:p-12 justify-center bg-white rounded-md text-sucorblue outline outline-1 outline-sucorblue grid-detail">
             <h4 class="text-xl font-bold text-center self-center pb-8">About<br/>Clean Canteen</h4>
             <p>
               *Food & Beverage*<br/><br/>
