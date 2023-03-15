@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loyalty Sucor Sekuritas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/5c15a3cb74.js" crossorigin="anonymous"></script>
+
+    <style>
+      .grid-all{
+        grid-template-columns: repeat(3, auto);
+        grid-template-areas: 'profile detail detail';
+      }
+      .profile{
+        grid-area: 'profile';
+      }
+      .detail{
+        grid-area: 'detail';
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              sucorblue: '#174489',
+            },
+            maxWidth: {
+              'xxs': '16rem',
+            }
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <nav class="fixed w-full px-8 py-5 flex justify-between content-center items-center bg-sucorblue gap-x-5 rounded-b-md">
+      <div class="max-w-xxs">
+        <a href="./">
+          <img src="https://raw.githubusercontent.com/adhityabaguswicaksono/loyalty-project/main/assets/logo-sucor-white.png" alt="Logo Sucor Sekuritas" />
+        </a>
+      </div>
+      <div>
+        <a href="https://eform.sucorsekuritas.com/">
+          <button
+            class="rounded-md bg-white px-4 py-2 text-sucorblue outline outline-0 hover:bg-sucorblue hover:outline-1 hover:outline-white hover:text-white hover:ease-in-out duration-300"
+          >
+            <p class="md:hidden leading-none">
+              <span class="material-symbols-outlined"> person </span>
+            </p>
+            <p class="hidden md:inline-block leading-none">Online Registration</p>
+          </button>
+        </a>
+      </div>
+    </nav>
+
+    <div class="p-8 pt-32 flex flex-col md:grid md:grid-all gap-3">
+        <div class="flex flex-wrap flex-col gap-4 p-8 md:p-12 justify-center bg-sucorblue rounded-md text-white outline outline-0 md:grid-profile">
+          <div class="flex flex-col grow gap-3">
+            <img src="https://raw.githubusercontent.com/adhityabaguswicaksono/loyalty-project/main/assets/thumbnailCard.png" class="rounded-full w-36 md:w-52 self-center"/>
+            <h4 class="text-xl font-bold text-center self-center">Clean Canteen</h4>
+          </div>
+          <hr class="border border-1 border-white rounded-full"/>
+          <div class="flex flex-col grow gap-3">
+            <div class="flex flex-row gap-3">
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+              </p>
+              <p>
+                SCBD, One Pacific Place 4th floor unit 4 no. 40-41 Kawasan, <br/>
+                Jl. Jenderal Sudirman No.52-53, RT.5/RW.3, Daerah Khusus Ibukota Jakarta 12190<br/>
+                (Terletak di: Pacific Place Mall)<br/><br/>
+                https://goo.gl/maps/zcQewkYchMpJKwQj7
+              </p>
+            </div>
+            <div class="flex flex-row gap-3">
+              <p>
+                <i class="fa-solid fa-phone"></i>
+              </p>
+              <p>
+                082312218038
+              </p>
+            </div>
+            <div class="flex flex-row gap-3">
+              <p>
+                <i class="fa-brands fa-instagram"></i>
+              </p>
+              <p>
+                @cleancanteen.id
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="flex flex-wrap flex-col gap-4 p-8 md:p-12 justify-center bg-white rounded-md text-sucorblue outline outline-1 outline-sucorblue md:grid-detail">
+            <h4 class="text-xl font-bold text-center self-center pb-8">About<br/>Clean Canteen</h4>
+            <p>
+              *Food & Beverage*<br/><br/>
+    
+              Terms & Condition Sucor Sekuritas X Clean Canteen:<br/><br/>
+    
+              1. Besaran benefit adalah 15%<br/>
+              2. Kerjasama berlangsung dari 21 Oktober 2022 - 31 December 2022<br/>
+              3. Nasabah Wajib menunjukan username di aplikasi Sucor<br/>
+              4. Setiap nasabah sucor sekuritas wajib mengisi data yang dibutuhkan merchant<br/>
+              5. Nasabah wajib follow dan tag minimal 1 instagram story / feed akun @sucorsekuritas & @cleancanteen.id<br/>
+              6. Diskon tidak berlaku pada tanggal 25 Desember 2022 , 30 Desember 2022 & 31 Desember 2022<br/>
+              7. Member benefit tidak bisa di pakai dengan promo lain.<br/>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
