@@ -8,10 +8,11 @@
     <title>Loyalty Sucor Sekuritas</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/5c15a3cb74.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/styles.css">
     <script src="./script/script.js"></script>
   </head>
   <body>
-    <nav class="fixed w-full px-8 py-5 content-center items-center bg-sucorblue rounded-b-lg">
+    <nav class="fixed w-full px-8 py-5 content-center items-center bg-sucorblue rounded-b-lg z-50">
       <div class="container mx-auto flex gap-x-5 justify-between content-center items-center">
         <div class="max-w-xxs">
           <a href="./">
@@ -44,7 +45,29 @@
       <div class="py-12">
         <h2 class="text-xl font-bold text-center text-sucorblue pb-4">Daftar Merchant<br/>Loyalty Sucor Sekuritas</h2>
 
-        <input type="text" class="placeholder:italic placeholder:text-gray-400 bg-white w-full border border-gray-300 rounded-md py-2 px-4 my-8 duration-300 focus:outline-none focus:border-sucorblue" placeholder="Cari..."/>
+        <div class="flex flex-col gap-3 py-6 md:flex-row-reverse">
+          <div class="grow">
+            <form class="flex items-center">   
+              <label for="simple-search" class="sr-only">Search</label>
+              <div class="relative w-full">
+                  <input type="text" id="simple-search" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-sucorblue focus:ring-0 focus:border-sucorblue block w-full p-2.5" placeholder="Search..." required>
+              </div>
+              <button type="submit" class="py-2.5 px-3 ml-2 text-sm font-medium text-white bg-sucorblue rounded-md border border-sucorblue duration-150 hover:bg-sucorblue-2 focus:ring-0 focus:outline-none focus:ring-sucorblue-2 hover:ease-in-out">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <span class="sr-only">Search</span>
+              </button>
+            </form>
+          </div>
+
+          <div>
+            <label for="category" class="sr-only">Category</label>
+            <select id="category" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-sucorblue focus:border-sucorblue block w-full p-2.5">
+              <option selected>Select Category</option>
+              <option value="1">Fashion</option>
+              <option value="2">Culinary</option>
+            </select>
+          </div>
+        </div>
 
         <div class="flex flex-wrap flex-col md:flex-row gap-4 justify-center">
           <a href="./detail.html">

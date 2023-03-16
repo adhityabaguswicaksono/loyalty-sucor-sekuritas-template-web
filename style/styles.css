@@ -10,3 +10,6 @@
 .grid-detail {
   grid-area: 'detail';
 }
+.z-index-nav {
+  z-index: 99999;
+}
