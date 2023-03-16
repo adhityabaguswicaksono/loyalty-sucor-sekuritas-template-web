@@ -5,8 +5,8 @@ tailwind.config = {
         sucorblue: '#174489',
       },
       maxWidth: {
-        'xxs': '16rem',
-      }
+        xxs: '16rem',
+      },
     },
   },
 };
